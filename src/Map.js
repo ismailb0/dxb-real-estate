@@ -13,17 +13,18 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 25.065170,
-  lng: 55.216860
+  lat: 25.08521194009404,
+  lng: 55.1369093986773
 };
 
-function Map() {
+function Map(props) {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: secrets.GOOGLE_MAPS_KEY
   })
 
+  // eslint-disable-next-line
   const [map, setMap] = React.useState(null)
 
   const onLoad = React.useCallback(function callback(map) {
@@ -38,16 +39,16 @@ function Map() {
     setMap(null)
   }, [])
 
-
   return isLoaded ? (
     <div className="Map">
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={10}
+        zoom={13}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
+        {props.areaOverlays}
       </GoogleMap>
     </div>
   ) : <></>
