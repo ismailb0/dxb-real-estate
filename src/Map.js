@@ -2,6 +2,8 @@ import React from 'react'
 import './Map.css';
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
+import secrets from "./vault.json"
+
 // eslint-disable-next-line
 const google = window.google;
 
@@ -19,7 +21,7 @@ function Map() {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyBVlyVpD1qbffvow_g26LjCuAIUce42wwA"
+    googleMapsApiKey: secrets.GOOGLE_MAPS_KEY
   })
 
   const [map, setMap] = React.useState(null)
