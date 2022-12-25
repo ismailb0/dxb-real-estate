@@ -2,7 +2,7 @@ import React from 'react'
 import './Map.css';
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
-import secrets from "./vault.json"
+import secrets from "../vault.json"
 
 // eslint-disable-next-line
 const google = window.google;
