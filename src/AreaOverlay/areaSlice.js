@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import _ from 'lodash';
+import AREAS from '../Constants/Areas'
 
 const initialState = {
-  areas: []
+  areas: Object.keys(AREAS)
 }
 
 export const areaSlice = createSlice({

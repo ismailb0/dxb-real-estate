@@ -11,7 +11,7 @@ function MapPage() {
   // eslint-disable-next-line
   const dispatch = useDispatch();
 
-  const areaOverlays = areas.map((area) => <AreaOverlay areaCoordinates={AREAS[area]} key={AREAS[area]} />)
+  const areaOverlays = areas.map((area) => <AreaOverlay areaCoordinates={AREAS[area]} key={area} />)
 
   return (
     <div className="MapPage">
