@@ -23,5 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # local
-package.json
+package-lock.json
 src/vault.json
